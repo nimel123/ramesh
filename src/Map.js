@@ -7,6 +7,12 @@ function Map(props){
         {
             name:"Mamta",email:"mamta9053@gmail.com",contact:123456655
         },
+          {
+            name:"Ramesh",email:"rnimel5@gmail.com",contact:8222098246
+        },
+        {
+            name:"Mamta",email:"mamta9053@gmail.com",contact:123456655
+        },
     ]
     return(
     <div>

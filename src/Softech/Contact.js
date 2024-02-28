@@ -4,55 +4,14 @@ import time from './time.png';
 import email from './email.png';
 import address from './address2.webp';
 import Carousel from 'react-bootstrap/Carousel';
+import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-
-
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
 
 
 function Contact(){
-    function details(){
-        let name=document.getElementById("name").value;
-        let phone=document.getElementById("phone").value;
-        let email=document.getElementById("email").value;
-        let address=document.getElementById("address").value;
-        let query=document.getElementById("query").value;
-        if(name=="")
-        {
-            alert("Please Input Valid Name");
-        }
-        else
-        if(phone=="" || phone.length<10 || phone.length>10)
-        {
-            alert("Please Input Valid Phone Number");
-        }
-        else 
-        if(email=="")
-        {
-            alert("Invalid Email");
-        }
-        else
-        if(address=="")
-        {
-            alert("Address must important");
-        }
-        else
-        if(query=="")
-        {
-            alert("Please Input Your Query");
-        }
-        else{
-         document.write("Thanks for your Feedback.....✌");
-         <br></br>
-         document.write("We are trying to give you Response very soon...👍");
-        document.getElementById("name").value="";
-        document.getElementById("phone").value="";
-        document.getElementById("email").value="";
-        document.getElementById("address").value="";
-        document.getElementById("query").value="";
-        }
-       
-    }
     return(
 <div className='contact'>
     <center>
@@ -117,37 +76,77 @@ function Contact(){
   </div>  
   </center>
  
-  <div className='textfield'>
-    <br></br>
-    &nbsp;&nbsp;&nbsp; Name   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Phone
-    <br></br>
-    <input type="text" className='input'placeholder='Enter Name'id='name'></input>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="number" className='input'placeholder='Enter Phone Number'id='phone'></input>
+  <div className='d-flex align-items-center justify-content-center text-center min-vh-100'>
 
-    <br></br><br></br>
-    &nbsp;&nbsp;&nbsp; Email   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Address
-    <br></br>
-    <input type="email" className='input'placeholder='Enter Email'id='email'></input>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" className='input'placeholder='Enter Address'id='address'></input>
-    
-    <br></br><br></br>
-    &nbsp;&nbsp;&nbsp; Query
-    <br></br>
-    <Form as="textarea" rows={3}className='input1' placeholder='Enter your query in description'id='query'/>
-<br></br><br></br><br></br>
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="submit"id="btn1"onClick={details}></input>
+  <Form >
+      <Row>
+        <Col>
+        <Form.Label>Name</Form.Label>
+          <Form.Control placeholder="First name"  />
+        </Col>
+        <Col>
+        <Form.Label>Last Name</Form.Label>
+          <Form.Control placeholder="Last name" />
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
 
+        <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+      </Row>
+
+      <Form.Group className="mb-3" controlId="formGridAddress1">
+        <Form.Label>Address</Form.Label>
+        <Form.Control placeholder="1234 Main St" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formGridAddress2">
+        <Form.Label>Address 2</Form.Label>
+        <Form.Control placeholder="Apartment, studio, or floor" />
+      </Form.Group>
+
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridCity">
+          <Form.Label>City</Form.Label>
+          <Form.Control />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridState">
+          <Form.Label>State</Form.Label>
+          <Form.Select defaultValue="Choose...">
+            <option>Choose...</option>
+            <option>Haryana</option>
+            <option>Punjab</option>
+            <option>Kerala</option>
+            <option>Rajasthan</option>
+            <option>Jammu & Kashmir</option>
+            <option>Himachal Pardesh</option>
+          </Form.Select>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridZip">
+          <Form.Label>Zip</Form.Label>
+          <Form.Control />
+        </Form.Group>
+      </Row>
+
+      <Form.Group className="mb-3" id="formGridCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
    
         
-     
+   
    
 
 

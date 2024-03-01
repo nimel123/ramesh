@@ -52,15 +52,24 @@
     color: red;
 }
 #table1{
-    width: fit-content;;
-    height: 30px;
-    background-color:aliceblue;
-    color:red;
-    border-color: black;
+  
+   
+    color:rgb(0, 42, 255);
+    border-color: blue;
+    border-style: double;
+    border-color: blueviolet;
+    border-top: red;
 }
 
 .contact{
     background-color: black;
     
 }
-
+#pc{
+    width: 100%;
+    height: 500px;
+}
+.api{
+    width:fit-content;
+    height: 70px;
+}

@@ -15,13 +15,16 @@ import State from './UseState2';
 import Hello from './UseEffect';
 import Table from './Table';
 import App1 from './Api';
-
+import Example from './Softech/Home';
+import Bootapi from './Bootstrap-api-tabel';
+import Api from './Api -table';
+import Post from './Post';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Softech/>
+    <Softech />
   </React.StrictMode>
 );
 

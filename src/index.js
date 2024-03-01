@@ -14,13 +14,14 @@ import Softech from './Softech/Softech';
 import State from './UseState2';
 import Hello from './UseEffect';
 import Table from './Table';
+import App1 from './Api';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Map/>
+    <Softech/>
   </React.StrictMode>
 );
 

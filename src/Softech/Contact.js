@@ -11,17 +11,19 @@ import Button from 'react-bootstrap/Button';
 
 
 
+
 function Contact(){
     return(
+      
 <div className='contact'>
     <center>
         <br></br>
  <h3>Get Connected With</h3>
  <h1 className='softech'>Softech Infoways</h1>
- </center><br></br>
+ </center><br></br><br></br>
  <center>
-    <Carousel>
-        <Carousel.Item>
+    <Carousel className='carosel'>
+        <Carousel.Item > 
         <div className='mobile'>
    <img src={call} className='call'></img>
     <br></br><br></br><br></br>
@@ -67,7 +69,7 @@ function Contact(){
     </Carousel>
     </center> 
 
- <br></br><br></br>
+ <br></br>
 <center>
  <div id="message">
   <h2 className="softech">Send us a message</h2>
@@ -144,7 +146,7 @@ function Contact(){
         Submit
       </Button>
     </Form>
-   
+       
         
    
    

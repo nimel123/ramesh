@@ -304,15 +304,18 @@ background: #f76c2f;
 
 .hover:hover{
  
-    border: solid;
+    border: double;
     border-right-color: #f76c2f;
     border-left-color: blue;
     border-top-color: aqua;
     border-bottom-color: tomato;
     transform: scale(1.10);
     transition: 0.8s;
+    
+    
 }
 .size{
     height: 250px;
     margin-top: 80px;
 }
+

@@ -21,10 +21,11 @@ import Api from './Api -table';
 import Post from './Post';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Softech />
+    <Softech/>
   </React.StrictMode>
 );
 

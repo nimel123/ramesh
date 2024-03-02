@@ -12,9 +12,11 @@ function Service() {
   return (
     <div className="border-top bg-c-light"><br />
     <div className="text-center">
+      <br /><br />
     <h2 className="main-hadding">Our Special Services</h2>
     <center>
       <div className="underline"></div>
+      <br></br>
       </center><br />  
     </div>
     <center>

@@ -1,36 +1,18 @@
 import React from "react";
-import Carousel from 'react-bootstrap/Carousel';
-import pc from './react 2.png';
-import pc1 from './react3.jpg';
-import pc2 from './react4.jpg';
 import Button from 'react-bootstrap/Button';
 import Misson from "./Misson";
 import Service from "./Service";
 import Footer from "./Footer";
+import video from './office.mp4';
 import './design1.css';
 function Example() {
   return (
     <div className="border-top bg-c-light">
-    <Carousel>
-      <Carousel.Item interval={1000}>
-        <img src={pc} id="pc"></img>
-        <Carousel.Caption className="caption">
-          
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item interval={1000}>
-      <Carousel.Caption className="caption">
-           
-        </Carousel.Caption>
-      <img src={pc1} id="pc"></img>
-      </Carousel.Item>
-      <Carousel.Item>
-       <img src={pc2} id="pc"></img>
-       <Carousel.Caption className="caption">
-           
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+     <video autoPlay loop muted className="video " src={video} type="video/mp4" />
+     <div className="name">
+        <h1 className="back">Welcome</h1>
+        <h1 className="back1">To Softech Infoways</h1>
+        </div>
     <br />
     <div className="size">
     <center>
@@ -56,8 +38,9 @@ function Example() {
     </div>
     </div>
     </div>
+    <br />
     <Service />
-    <br></br>
+    <br></br><br /><br />
     <Footer />
 
     </div>

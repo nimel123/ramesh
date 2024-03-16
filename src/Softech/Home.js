@@ -5,23 +5,26 @@ import Service from "./Service";
 import Footer from "./Footer";
 import video from './office.mp4';
 import './design1.css';
+import { Link } from "react-router-dom";
+import Softech from "./Softech";
 function Example() {
   return (
     <div className="border-top bg-c-light">
+    
      <video autoPlay loop muted className="video " src={video} type="video/mp4" />
      <div className="name">
         <h1 className="back">Welcome</h1>
         <h1 className="back1">To Softech Infoways</h1>
         </div>
-    <br />
+    <br /><br />
     <div className="size">
     <center>
         <h2 className="main-hadding">Softech Infoways</h2>
         <div className="underline"></div>
-        <p className="detail">Software Infoways is a best coatching center and<br />
-             company of Information Technology situated in Sirsa(125076) Haryana.
+        <p className="detail">Software Infoways is a best coaching center and<br />
+             company of Information Technology situated in Sirsa(125055) Haryana.
               This company working since 2006.</p>
-              <Button variant="outline-warning">Read More</Button>
+              <Button variant="outline-warning" as={Link} to="/About">Read More</Button>
     </center>
     </div>
     <br></br>
@@ -44,7 +47,6 @@ function Example() {
     <Footer />
 
     </div>
-    
   );
 }
 

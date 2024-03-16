@@ -77,25 +77,8 @@
     height: 200px;
     background-color: aqua;
     color: white;
-}
-.email{
-    width: 200px;
-    height: 200px;
-    background-color: aqua;
-    color: white;
-    
-}
-.time{
-    width: 200px;
-    height: 200px;
-    background-color: aqua;
-    color: white;
-}
-.address{
-    width: 200px;
-    height: 200px;
-    background-color: aqua;
-    color: white;
+    justify-content: center;
+    margin-top: 180px;
 }
 .mobile:hover{
     width: 200px;
@@ -104,37 +87,14 @@
     color: white;
     transition: 2s;
 }
-.email:hover{
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    color: white;
-    transition: 2s;
-    
-}
-.time:hover{
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    transition: 2s;
-    color: white;
-}
-.address:hover{
-    width: 200px;
-    height: 200px;
-    background-color:red;
-    color: white;
-    transition: 2s;
-}
-.all{
-    color:blue;
+.all1{
+   color: blue;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 #message{
-    width: 70%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     margin-left: -31px;
-    background-color:black;
 }
 .textfield{
     width: 50%;
@@ -254,8 +214,11 @@
 #photo{
     margin-top: 25px;
 }
-.carosel{
-    height: 250px;
+.goyal{
+    height: 200px;
+
+ margin-top:-50px;
+    
 }
 .caption{
     font-family: serif ;
@@ -309,13 +272,26 @@ background: #f76c2f;
     border-left-color: blue;
     border-top-color: aqua;
     border-bottom-color: tomato;
-    transform: scale(1.10);
     transition: 0.8s;
+    animation: animate 1s linear infinite alternate;
     
-    
-}
-.size{
-    height: 250px;
-    margin-top: 80px;
 }
 
+ @keyframes animate{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform:scale(1);
+    }
+
+} 
+.size{
+    height: 300px;
+    margin-top: 100px;
+   
+}
+.night{
+    justify-content: right;
+    left: 0;
+}

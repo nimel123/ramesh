@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
+import Footer from './Footer';
 
 
 
@@ -22,50 +23,51 @@ function Contact(){
  <h1 className='softech'>Softech Infoways</h1>
  </center><br></br><br></br>
  <center>
-    <Carousel className='carosel'>
+    <Carousel className='goyal'>
         <Carousel.Item > 
         <div className='mobile'>
    <img src={call} className='call'></img>
     <br></br><br></br><br></br>
-    <h6 className='all'>+91 99966-70050</h6>
-    <h6 className='all'>Gagan Goyal</h6>
+    <h6 className='all1'>+91 99966-70050</h6>
+    <h6 className='all1'>Gagan Goyal</h6>
     <br></br>
-    <h6 className='all'>Phone Number</h6>
+    <h6 className='all1'>Phone Number</h6>
 </div>
         </Carousel.Item>      
         <Carousel.Item>
-        <div className='email'>
+        <div className='mobile'>
         <img src={email} className='call'></img>
 <br></br><br></br><br></br>
-    <h6 className='all'>info123@gmail.com</h6>
+    <h6 className='all1'>info123@gmail.com</h6>
     <br></br><br></br>
-    <h6 className='all'>Email-Address</h6>
+    <h6 className='all1'>Email-Address</h6>
   </div>
         </Carousel.Item>
         
         <Carousel.Item>
-            <div className='time'>
+            <div className='mobile'>
     <img src={time}className='call'></img>
 <br></br><br></br><br></br>
-    <h6 className='all'>Monday-Sunday</h6>
-    <h6 className='all'>7:00 am-7:00 pm</h6>
+    <h6 className='all1'>Monday-Sunday</h6>
+    <h6 className='all1'>7:00 am-7:00 pm</h6>
     <br></br>
-    <h6 className='all'>Business Hour</h6>
+    <h6 className='all1'>Business Hour</h6>
     </div>
    
 
         </Carousel.Item>
         <Carousel.Item>
-        <div className='address'>
+        <div className='mobile'>
   
         <img src={address}className='call'></img>
     <br></br><br></br>
-    <h6 className='all'>Suvidha Marg,Aggersen Colony,Sirsa(125055)<br></br>Haryana</h6>
+    <h6 className='all1'>Suvidha Marg,Aggersen Colony,Sirsa(125055)<br></br>Haryana</h6>
     <br></br>
-    <h6 className='all'>Office Address</h6>
+    <h6 className='all1'>Office Address</h6>
 
     </div>
         </Carousel.Item>
+       
     </Carousel>
     </center> 
 
@@ -78,7 +80,7 @@ function Contact(){
   </div>  
   </center>
  
-  <div className='d-flex align-items-center justify-content-center text-center min-vh-100'>
+  <div className='d-flex align-items-center justify-content-center text-left min-vh-100'>
 
   <Form >
       <Row>
@@ -114,11 +116,6 @@ function Contact(){
       </Form.Group>
 
       <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>City</Form.Label>
-          <Form.Control />
-        </Form.Group>
-
         <Form.Group as={Col} controlId="formGridState">
           <Form.Label>State</Form.Label>
           <Form.Select defaultValue="Choose...">
@@ -132,6 +129,11 @@ function Contact(){
           </Form.Select>
         </Form.Group>
 
+        <Form.Group as={Col} controlId="formGridCity">
+          <Form.Label>City</Form.Label>
+          <Form.Control />
+        </Form.Group>
+
         <Form.Group as={Col} controlId="formGridZip">
           <Form.Label>Zip</Form.Label>
           <Form.Control />
@@ -139,12 +141,13 @@ function Contact(){
       </Row>
 
       <Form.Group className="mb-3" id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Check type="checkbox" label="I agree to the Terms of Service and Privacy Policy" />
       </Form.Group>
-
-      <Button variant="primary" type="submit">
+   <center>
+      <Button variant="primary " type="submit">
         Submit
       </Button>
+      </center>
     </Form>
        
         
@@ -153,9 +156,10 @@ function Contact(){
 
 
     <br></br><br></br>
-    <br></br><br></br>
+   
    
   </div>
+ 
 </div>
     );
 }

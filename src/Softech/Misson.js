@@ -6,7 +6,7 @@ import './design1.css';
 function Misson(){
     return(
         
-<div className="bg-c-light">
+<div >
 <Container>
 <Row>
  <Col>

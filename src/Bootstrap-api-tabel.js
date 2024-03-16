@@ -2,7 +2,11 @@ import React from "react";
 import './design.css';
 import { useState,useEffect } from "react";
 import Table from 'react-bootstrap/Table';
-function Bootapi()
+import {BrowserRouter as Router,Link,Routes,Route} from "react-router-dom";
+
+
+
+function Bootapi1()
 {
     const[tabledata,setTabledata]=useState(null);
     useEffect(()=>{
@@ -16,6 +20,7 @@ function Bootapi()
     })
 
     return(
+    
         <div >
            <Table striped bordered hover >
       <thead>
@@ -43,7 +48,9 @@ function Bootapi()
             } 
       </tbody>
     </Table>
+   
         </div>
-    );
+       
+    )  
 }
-export default Bootapi;
+export default Bootapi1;

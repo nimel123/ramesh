@@ -84,11 +84,10 @@
 }
 .name{
     position: absolute;
-    height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
-    top: 0;
+    margin-top: -400px;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     color: white;

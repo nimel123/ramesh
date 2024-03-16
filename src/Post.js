@@ -12,19 +12,15 @@ function Post(){
         };
         fetch('https://reqres.in/api/posts', requestOptions)
             .then(response => response.json())
-            .then(data => 
-                
+            .then(data => {
+                console.log(data)
                 setResponse(data)
+            }
                 );
      })
     return(
         <div>
-            {
-            response?response.map(item=>
-                {
-                  <h1>{item.data}</h1>
-                }):null  
-            }
+               <h1>response from api is {JSON.stringify(response)}</h1>
         </div>
     );
 }
